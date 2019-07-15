@@ -21,3 +21,6 @@ body {
   position: absolute;
 }
 
+video::-webkit-media-controls-overlay-play-button {
+  display: none;
+}
