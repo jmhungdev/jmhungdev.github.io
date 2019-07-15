@@ -3,7 +3,7 @@
   min-height: 100%;
   width: 100px;
   height: 100px;
-  position: relative;
+  position: absolute;
   top: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -14,10 +14,10 @@ body {
   margin: 0px;
 }
 
-.video-container video{
+/* .video-container video{
   height: 100vh;
   width: 100vw;
   object-fit: cover;
   position: absolute;
 }
-
+ */
