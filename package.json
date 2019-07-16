@@ -1,0 +1,20 @@
+{
+  "name": "jmhungdev.github.io",
+  "version": "1.0.0",
+  "description": "This is the git workshop for jmhung.github.io, the personal website for Jimmy Hung template forked from bjornarneson.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmhungdev/jmhungdev.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmhungdev/jmhungdev.github.io/issues"
+  },
+  "homepage": "https://github.com/jmhungdev/jmhungdev.github.io#readme"
+}
