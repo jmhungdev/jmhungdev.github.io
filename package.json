@@ -1,7 +1,7 @@
 {
   "name": "jmhungdev.github.io",
   "version": "1.0.0",
-  "description": "This is the git workshop for jmhung.github.io, the personal website for Jimmy Hung template forked from bjornarneson.github.io",
+  "description": "This is Jimmy's personal website hosted by Github Pages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
