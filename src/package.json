@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jmhungdev/jmhungdev.github.io/issues"
   },
-  "homepage": "https://github.com/jmhungdev/jmhungdev.github.io#readme"
+  "homepage": "https://github.com/jmhungdev/jmhungdev.github.io#readme",
+  "dependencies": {
+    "react": "^16.8.6"
+  }
 }
