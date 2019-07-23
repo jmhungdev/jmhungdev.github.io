@@ -37,7 +37,7 @@ body {
 .tag {
   color: white;
   flex: 1;
-  /* font-family: 'Amatic SC', cursive; */
+  font-family: 'Amatic SC', cursive;
   font-size: 30px;
   z-index:2;
 }
