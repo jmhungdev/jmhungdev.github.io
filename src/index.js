@@ -4,4 +4,4 @@ import App from './components/App.jsx'
 
 const rootElement = document.getElementById('react-app');
 
-render(<App/>, rootElement);
+render(<div>hello</div>, rootElement);
