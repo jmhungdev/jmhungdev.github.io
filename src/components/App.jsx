@@ -1,6 +1,8 @@
 import React from 'react';
 import MainBckVideo from './mainbckvideo/MainBckVideo.jsx';
+import MainFrntOverlay from './mainfrntoverlay/mainFrntOverlay.jsx';
 import './style.global.css';
+
 
 class App extends React.Component {
 
@@ -8,9 +10,7 @@ class App extends React.Component {
     return  (
     <>
     <MainBckVideo/>
-    <div className="overlay">
-        <div className="tag"><a>everything starts with an idea...  - jimmy hung</a></div>
-    </div>
+    <MainFrntOverlay/>
 
     </>
     )
