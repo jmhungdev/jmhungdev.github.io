@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './mainFrntOverlay.local.css';
+import styles from './MainFrntOverlay.local.css';
+import NavBar from '../navbar/NavBar.jsx';
 
 class MainFrntOverlay extends React.Component {
 
@@ -14,16 +15,17 @@ class MainFrntOverlay extends React.Component {
   componentDidMount() {
     // use the node ref to create the animation
   
-    this.myTween = TweenLite.to(this.myElement, 2, { x: 600, ease: "bounce.out()"});
-    console.log(this.myTween, 'my tween inside componentDidMount');
+    // this.myTween = TweenLite.to(this.myElement, 2, { x: 600, ease: "bounce.out()"});
+    // console.log(this.myTween, 'my tween inside componentDidMount');
   }
 
   render() {
-    console.log(this.myTween, 'this is my tween');
+    // console.log(this.myTween, 'this is my tween');
     
     return (
       <div className={styles.overlay}>
-        <div className={styles.tag} ref={div => this.myElement = div}><a>everything starts with an idea...  - jimmy hung</a></div>
+        <NavBar/>
+        <div className={styles.tag}>everything starts with an idea - jimmy hung</div>
       </div>
     )
   }

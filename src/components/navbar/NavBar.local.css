@@ -1,0 +1,17 @@
+.navbar {
+  position: absolute;
+  /* background-color: rgba(0,0,0,0.5); */
+  height:100px;
+  width: 80%;
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  color: white;
+  /* border: solid red 2px; */
+  justify-content: space-around;
+  align-items: center;
+  left: 10vw;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  
+}
