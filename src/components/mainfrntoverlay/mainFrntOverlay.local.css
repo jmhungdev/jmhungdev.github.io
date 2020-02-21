@@ -8,17 +8,30 @@
   vertical-align: center;
   text-align: center;
   /* align-items: center; */
-  border-top: white 0.1px solid;
-  border-bottom: white 0.1px solid;
+  /* border-top: white 0.1px solid;
+  border-bottom: white 0.1px solid; */
   
  }
  
  .tag {
-   position: absolute;
-   top: 50vh;
-   left: 35vw;
+   display: block;
+   margin-top: 50vh;
    /* border: red 2px solid; */
    color: white;
-   font-family: 'Amatic SC', cursive;
-   font-size: 30px;
+   font-family: 'quickregular';
+   font-size: 15px;
+   opacity: 0;
+   animation: fadeIn 3s 0.5s ease-in;
+   animation-fill-mode: forwards;
+  
+  
  }
+
+
+ @keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}

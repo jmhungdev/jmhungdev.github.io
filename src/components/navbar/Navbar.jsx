@@ -19,7 +19,7 @@ class NavBar extends React.Component {
     return (
       <>
         <div className={styles.navbar}>
-          <div href="#home">Jimmy's Home</div>
+          <div href="#home">Home</div>
           <div href="#portfolio">Portfolio</div>
           <div href="#about">About</div>
           <div href="message">Message</div>
