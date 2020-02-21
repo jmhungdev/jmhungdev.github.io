@@ -9,16 +9,18 @@
   transform: translate(-50%, -50%);
 
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html {
+html, body {
   height:100%;
-}
-body {
-  margin: 0px;
-  min-height:100%;
+  width: 100%;
 }
 
-.overlay {
+/* .overlay {
  position:absolute;
  background-color: rgba(0,0,0,0.3);
  height:100%;
@@ -36,4 +38,4 @@ body {
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
   z-index:2;
-}
+} */
