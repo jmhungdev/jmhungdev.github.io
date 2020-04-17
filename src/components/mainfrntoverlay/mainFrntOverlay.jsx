@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './MainFrntOverlay.local.css';
 import NavBar from '../navbar/NavBar.jsx';
+import Frame from './frame.svg';
+
 
 class MainFrntOverlay extends React.Component {
 
@@ -23,10 +25,19 @@ class MainFrntOverlay extends React.Component {
     // console.log(this.myTween, 'this is my tween');
     
     return (
-      <div className={styles.overlay}>
-        <NavBar/>
-        <div className={styles.tag}>everything starts with an idea - jimmy hung</div>
-      </div>
+      <>
+      <nav id="menu" className="menu-overlay">
+        <div className={styles.menu}>
+          {/* <ul>
+            <li> About </li>
+            <li> Blog  </li>
+          </ul> */}
+        </div>
+      </nav>
+      <nav id="anti-menu" className="menu-anti-overlay">
+
+      </nav>
+      </>
     )
   }
 

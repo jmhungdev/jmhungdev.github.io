@@ -1,17 +1,32 @@
-.navbar {
+.hamburger {
+  /* display: inline-block; */
+  text-align: right;
+  z-index:3;
+}
+
+.menu {
   position: absolute;
-  /* background-color: rgba(0,0,0,0.5); */
-  height:100px;
+  height: 80px;
   width: 80%;
-  z-index: 2;
+  border: 1px red solid;
   display: flex;
-  text-align: center;
+  flex-direction: row;
+  /* text-align: center; */
   color: white;
   /* border: solid red 2px; */
-  justify-content: space-around;
   align-items: center;
   left: 10vw;
   font-family: 'quickregular';
   font-size: 15px;
+}
+
+.menu ul {
+  display: flex;
   
+}
+
+.menu li {
+  list-style: none;
+  text-decoration: none;
+  padding: 2rem;
 }

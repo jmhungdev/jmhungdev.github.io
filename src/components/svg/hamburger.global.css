@@ -1,0 +1,115 @@
+#hamburger {
+  position: fixed; 
+  z-index: 999;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.menu-overlay {
+  position: fixed;
+  z-index: 998;
+  background-color: rgba(14, 255, 195, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  vertical-align: center;
+  transform-origin: right;
+  transition-duration: 0.8s;
+  transform: translate(110%,0); 
+  transition-timing-function: ease-in;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+  mix-blend-mode: screen;
+  /* transition: border-radius 1s ease-in; */
+}
+
+.menu-overlay.active {
+  transform: translate(0%,0);
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+}
+
+.menu-anti-overlay {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(255, 14, 106, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  vertical-align: center;
+  transform-origin: right;
+  transition-duration: 0.8s;
+  transform: translate(-110%,0); 
+  transition-timing-function: ease-in;
+  border-top-right-radius: 10% 50%;
+  border-bottom-right-radius: 10% 50%;
+  mix-blend-mode: screen;
+  /* transition: border-radius 1s ease-in; */
+}
+
+.menu-anti-overlay.active{
+  transform: translate(0%,0);
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+
+
+
+/* .menu-overlay::before{
+  content: "";
+  display: block;
+  position: relative;
+  left: -20px;
+  background-color:rgba(14, 255, 195, 0.5);
+  height: 100%;
+  width: 20px;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in;
+  border-top-left-radius: 30% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.menu-overlay.active::before {
+  transform: translate(0%,0);
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+} */
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: white;
+  stroke-width: 3.5;
+  stroke-linecap:round;
+}
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}

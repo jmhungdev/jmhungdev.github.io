@@ -35,7 +35,18 @@ module.exports = {
           name: '[name].[ext]'
         }
       }
-    }],
+    },
+    {
+      test: /\.(png|jp(e*)g|svg|gif)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[hash]-[name].[ext]',
+          },
+        },
+      ],
+    }]
   },
   devServer: {
     contentBase: path.resolve(__dirname, './docs'),
