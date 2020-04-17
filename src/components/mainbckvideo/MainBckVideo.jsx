@@ -6,11 +6,11 @@ export default class MainBckVideo extends React.Component {
 
   render() {
     return (
-      <div>
+      <section>
         <video className={styles.video} autoPlay muted loop playsInline>
           <source src="./iss.mp4" type="video/mp4" />
         </video>
-      </div>
+      </section>
     )
   }
 };

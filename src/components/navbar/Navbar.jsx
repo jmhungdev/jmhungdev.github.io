@@ -1,29 +1,34 @@
 import React from 'react';
 import styles from './NavBar.local.css';
-
+import Hamburger from '../svg/hamburger.jsx';
 
 class NavBar extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      menuState: false
     }
-    // this.functionOne.bind(this);
+
+    this.toggleMenuState = this.toggleMenuState.bind(this);
   }
 
-  // functionOne() {
-
-  // }
-
+  toggleMenuState() {
+    let notState = !this.state.menuState;
+    this.setState({ menuState: notState });
+  }
   render() {
     return (
       <>
-        <div className={styles.navbar}>
-          <div href="#home">Home</div>
-          <div href="#portfolio">Portfolio</div>
-          <div href="#about">About</div>
-          <div href="message">Message</div>
-        </div>
+        <nav className={styles.menu}>
+          <Hamburger toggle={this.toggleMenuState} />
+          <ul>
+            <li href="#home">Home</li>
+            <li href="#portfolio">Portfolio</li>
+            <li href="#about">About</li>
+            <li href="message">Message</li>
+          </ul>
+        </nav>
       </>
     )
   }
