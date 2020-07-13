@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App.jsx'
+import App from './components/App.jsx';
+import './tailwind.global.css';
+
 
 const rootElement = document.getElementById('gate');
-var scroll = new SmoothScroll('a[href*="#"]');
-console.log(`【 made with ❤ by h3x4g0n 2020 】`);
+
+console.log(`【 made with ❤ by jmhungdev 2020 】`);
 render(<App/>, rootElement);

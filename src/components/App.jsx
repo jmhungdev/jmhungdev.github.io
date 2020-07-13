@@ -8,15 +8,15 @@ import './style.global.css';
 
 
 class App extends React.Component {
-
+  
   render() {
     return (
       <>
         <header>
-          <Hamburger />
-          <MainFrntOverlay />
+          {/* <Hamburger /> */}
+          {/* <MainFrntOverlay /> */}
         </header>
-        <main className="container">
+        <main className="hex">
           <MainBckVideo />
           <About/>
         </main>

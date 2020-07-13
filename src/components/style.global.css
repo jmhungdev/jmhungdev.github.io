@@ -9,6 +9,8 @@
   transform: translate(-50%, -50%);
 
 } */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +22,7 @@ html, body {
   width: 100%;
 }
 
-@media only screen and (max-width: 580px) {
+/* @media only screen and (max-width: 580px) {
   html,
   body {
     top: 0;
@@ -30,11 +32,11 @@ html, body {
     position: fixed;
     overflow: hidden;
   }
-}
+} */
 
 body {
   overflow: hidden;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   /* background-color: black; */
 }
 
@@ -43,14 +45,18 @@ section {
   margin : 0;
   height: 100%;
   width: 100%;
+  scroll-snap-align: start;
+  position: fixed;
 }
 
-.container {
+.hex {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
   overflow-y: scroll;
   background-color: black;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
  
 #gate {
@@ -77,3 +83,18 @@ section {
   font-size: 30px;
   z-index:2;
 } */
+
+@font-face {
+  font-family: 'quickregular';
+  src: url('quick-webfont.woff2') format('woff2'),
+       url('quick-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: DOS;
+  src: url(Fixedsys500c.woff);
+}
+

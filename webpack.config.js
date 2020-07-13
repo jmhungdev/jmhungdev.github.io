@@ -27,7 +27,7 @@ module.exports = {
       use: ['style-loader', 'css-loader']
     },
     {
-      test: /\.(png|jpe?g|gif|mp4)$/,
+      test: /\.(mp4)$/,
       include: path.resolve(__dirname, './src'),
       use: {
         loader: 'file-loader',
@@ -42,10 +42,22 @@ module.exports = {
         {
           loader: 'file-loader',
           options: {
-            name: 'images/[hash]-[name].[ext]',
+            name: '/images/[hash]-[name].[ext]',
           },
         },
       ],
+    },
+    {
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }
+      ]
     }]
   },
   devServer: {

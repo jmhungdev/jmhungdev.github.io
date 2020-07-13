@@ -5,78 +5,14 @@
   top: 1rem;
   width: 2rem;
   height: 2rem;
+  transition-timing-function: ease-out;
+  transition: box-shadow 0.3s;
 }
 
-.menu-overlay {
-  position: fixed;
-  z-index: 998;
-  background-color: rgba(14, 255, 195, 0.5);
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  vertical-align: center;
-  transform-origin: right;
-  transition-duration: 0.8s;
-  transform: translate(110%,0); 
-  transition-timing-function: ease-in;
-  border-top-left-radius: 10% 50%;
-  border-bottom-left-radius: 10% 50%;
-  mix-blend-mode: screen;
-  /* transition: border-radius 1s ease-in; */
+#hamburger:hover {
+  border: greenyellow 1px solid;
+  box-shadow: 0 0 0.5rem 0.2rem wheat;
 }
-
-.menu-overlay.active {
-  transform: translate(0%,0);
-  border-top-left-radius: 0%;
-  border-bottom-left-radius: 0%;
-}
-
-.menu-anti-overlay {
-  position: fixed;
-  z-index: 999;
-  background-color: rgba(255, 14, 106, 0.5);
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  vertical-align: center;
-  transform-origin: right;
-  transition-duration: 0.8s;
-  transform: translate(-110%,0); 
-  transition-timing-function: ease-in;
-  border-top-right-radius: 10% 50%;
-  border-bottom-right-radius: 10% 50%;
-  mix-blend-mode: screen;
-  /* transition: border-radius 1s ease-in; */
-}
-
-.menu-anti-overlay.active{
-  transform: translate(0%,0);
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
-
-
-
-/* .menu-overlay::before{
-  content: "";
-  display: block;
-  position: relative;
-  left: -20px;
-  background-color:rgba(14, 255, 195, 0.5);
-  height: 100%;
-  width: 20px;
-  transition-duration: 0.8s;
-  transition-timing-function: ease-in;
-  border-top-left-radius: 30% 50%;
-  border-bottom-left-radius: 50% 50%;
-}
-
-.menu-overlay.active::before {
-  transform: translate(0%,0);
-  border-top-left-radius: 0%;
-  border-bottom-left-radius: 0%;
-} */
 
 .ham {
   cursor: pointer;
@@ -88,6 +24,10 @@
   user-select: none;
   padding: 0;
 }
+/* 
+.ham:hover{
+
+} */
 .hamRotate.active {
   transform: rotate(45deg);
 }

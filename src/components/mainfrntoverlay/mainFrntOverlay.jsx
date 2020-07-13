@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './MainFrntOverlay.local.css';
-import NavBar from '../navbar/NavBar.jsx';
-import Frame from './frame.svg';
+import './MainFrntOverlay.global.css';
+// import NavBar from '../navbar/NavBar.jsx';
+// import Frame from './frame.svg';
 
 
 class MainFrntOverlay extends React.Component {
@@ -26,16 +27,13 @@ class MainFrntOverlay extends React.Component {
     
     return (
       <>
-      <nav id="menu" className="menu-overlay">
+      <nav id="menu" className={styles.menuoverlay}>
         <div className={styles.menu}>
-          {/* <ul>
+          <ul>
             <li> About </li>
             <li> Blog  </li>
-          </ul> */}
+          </ul>
         </div>
-      </nav>
-      <nav id="anti-menu" className="menu-anti-overlay">
-
       </nav>
       </>
     )

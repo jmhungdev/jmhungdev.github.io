@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack-dev-server --mode development",
+    "serve": "npm run build:tailwindcss && webpack-dev-server --mode development --host 0.0.0.0",
     "build": "webpack --mode production",
+    "build:tailwindcss": "tailwindcss build ./src/stylesheet.css -o ./src/tailwind.global.css",
     "cleanbuild": "rm -r ./docs/* && webpack --mode production"
   },
   "repository": {
@@ -32,6 +33,7 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "style-loader": "^1.1.4",
+    "tailwindcss": "^1.4.6",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"

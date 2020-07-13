@@ -7,7 +7,7 @@
   /* border: solid red 2px; */
   align-items: center;
   font-family: 'quickregular';
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .menu ul {
@@ -21,5 +21,29 @@
   list-style: none;
   text-decoration: none;
   padding: 2rem;
-  text-align: right;
+  text-align: center;
 }
+
+.menuoverlay {
+  position: fixed;
+  z-index: 998;
+  background-color: rgb(11, 30, 48);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  vertical-align: center;
+  transform-origin: right;
+  transition-duration: 0.8s;
+  transform: translate(110%,0); 
+  transition-timing-function: ease-in-out;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+  /* mix-blend-mode: screen; */
+  /* transition: border-radius 1s ease-in; */
+}
+
+/* .menuoverlayActive {
+  transform: translate(0%,0);
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+} */
