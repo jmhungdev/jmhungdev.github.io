@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Karla:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  })();
+</script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+      <a href="/works.html"{% if page.url == "/works.html" %} aria-current="page"{% endif %}>Works</a>
+      <a href="/blog.html"{% if page.url == "/blog.html" or page.layout == "post" %} aria-current="page"{% endif %}>Blog</a>
+    </nav>
+
+    <main class="site-main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <p class="socials">Find me on
+          <a href="https://github.com/jmhungdev" target="_blank" rel="noopener">GitHub</a>,
+          or reach me via
+          <a href="mailto:hungmeenhong@gmail.com">email</a>.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+    <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.6" fill="none"/>
+      <path d="M12 3.5V1.5M12 22.5v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4M2 12H0M24 12h-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <path d="M20.5 14.8A8.6 8.6 0 1 1 9.2 3.5a7 7 0 0 0 11.3 11.3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </button>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

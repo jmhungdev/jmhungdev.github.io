@@ -1,0 +1,20 @@
+title: Jimmy Hung
+description: Software, architecture, security, and AI.
+url: "https://jmhung.dev"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /blog/:title/
+
+exclude:
+  - README.md
+  - ascii.go
+  - ascii.md
