@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jmhungdev/jmhungdev.github.io#readme",
   "dependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
