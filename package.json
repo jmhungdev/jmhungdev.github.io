@@ -33,10 +33,10 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "style-loader": "^1.1.4",
-    "tailwindcss": "^1.4.6",
-    "webpack": "^4.42.1",
+    "tailwindcss": "^4.3.2",
+    "webpack": "^5.108.4",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^6.0.0"
   },
   "devDependencies": {
     "file-loader": "^5.1.0"
