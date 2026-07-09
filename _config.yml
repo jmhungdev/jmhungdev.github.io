@@ -1,6 +1,6 @@
 title: Jimmy Hung
 description: Software, architecture, security, and AI.
-url: "https://jmhung.dev"
+url: "https://jmhung.com"
 
 markdown: kramdown
 kramdown:
@@ -12,9 +12,8 @@ defaults:
       path: ""
       type: posts
     values:
-      permalink: /blog/:title/
+      permalink: /deepdive/:title/
 
 exclude:
   - README.md
-  - ascii.go
-  - ascii.md
+  - DOMAINS.md
