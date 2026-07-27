@@ -1,0 +1,70 @@
+{
+  "project": "jmhungdev.github.io",
+  "description": "Jekyll personal site for jmhung.com, deployed to GitHub Pages",
+  "features": [
+    {
+      "id": "site-build",
+      "name": "Clean Jekyll Build",
+      "description": "Site builds with strict front matter and produces all expected output files",
+      "status": "pass",
+      "evidence": "bash init.sh exits 0: jekyll 4.4.1 build --strict_front_matter succeeds, all six expected _site/ artifacts present, 1/1 posts built, all root-relative links resolve",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "home-page",
+      "name": "Home Page",
+      "description": "Root page renders through the default layout with title and description metadata",
+      "status": "fail",
+      "evidence": "Builds and renders (_site/index.html has <title>Home · Jimmy Hung</title>), but body copy is unfinished: two PLACEHOLDER comments remain, and index.html:10 has a stray closing </p> with a missing opening <p>",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "deepdive-index",
+      "name": "Deepdive Index",
+      "description": "Post index lists every published post newest-first, with an empty state when none exist",
+      "status": "pass",
+      "evidence": "_site/deepdive.html links href=\"/deepdive/jcode-deepdive-example/\"; empty-state branch present in deepdive.html source but not exercised while posts exist",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "post-layout",
+      "name": "Post Layout & Permalinks",
+      "description": "Posts render via post.html with title and date, published under /deepdive/:title/, code blocks highlighted",
+      "status": "pass",
+      "evidence": "_site/deepdive/jcode-deepdive-example/index.html built from _posts/2026-07-09-*.md, title 'jcode Deepdive: Example (delete me) · Jimmy Hung', rouge emitted a class=\"highlight\" block for the js fence",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "nav-active-state",
+      "name": "Navigation Active State",
+      "description": "Primary nav marks the current section with aria-current, including posts under Deepdive",
+      "status": "pass",
+      "evidence": "_site/index.html renders <a href=\"/\" aria-current=\"page\">; the Deepdive link carries the same condition for page.layout == 'post'",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "theme-toggle",
+      "name": "Light/Dark Theme Toggle",
+      "description": "Theme follows OS preference, can be overridden by the toggle, persists in localStorage, and applies before first paint",
+      "status": "not-started",
+      "evidence": "Code is in place and ships to _site/ (css/style.css defines data-theme overrides, js/theme.js and the pre-paint inline script are present), but not yet verified in a browser in both themes",
+      "testedAt": null
+    },
+    {
+      "id": "custom-domain",
+      "name": "Custom Domain",
+      "description": "Site serves from jmhung.com with CNAME preserved through the build",
+      "status": "pass",
+      "evidence": "CNAME contains jmhung.com and is copied to _site/CNAME by the build; matches url in _config.yml",
+      "testedAt": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": "ci-deploy",
+      "name": "GitHub Pages Deployment",
+      "description": "Push to main builds via actions/jekyll-build-pages and deploys to GitHub Pages",
+      "status": "not-started",
+      "evidence": "Workflow .github/workflows/jekyll-gh-pages.yml is configured for push to main with pages/id-token permissions; no run observed from this working tree",
+      "testedAt": null
+    }
+  ]
+}
